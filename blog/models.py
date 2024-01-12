@@ -24,9 +24,9 @@ class Post(models.Model):
     )
 
     image = models.ImageField(
+        upload_to='images/',
+        default='images/default.png',
         verbose_name='Изображение поста',
-        upload_to='posts/',
-        blank=True,
     )
 
     slug = models.SlugField(max_length=200,
